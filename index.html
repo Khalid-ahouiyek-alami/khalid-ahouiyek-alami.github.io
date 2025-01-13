@@ -3,11 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>Mijn Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .animate-slideIn {
+            animation: slideIn 0.8s ease-out;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-green-400 text-white p-4 ">Hello, world!</div>
-    
+<body class="bg-gray-100">
+    <!-- Header/Intro Sectie -->
+    <header class="bg-white shadow-lg fixed w-full z-50 transition-all duration-300 hover:shadow-xl">
+        <nav class="container mx-auto px-6 py-4">
+            <ul class="flex space-x-6">
+                <li><a href="#over-mij" class="hover:text-blue-600 transition-colors duration-300">Over Mij</a></li>
+                <li><a href="#projecten" class="hover:text-blue-600 transition-colors duration-300">Projecten</a></li>
+                <li><a href="#vaardigheden" class="hover:text-blue-600 transition-colors duration-300">Vaardigheden</a></li>
+                <li><a href="#contact" class="hover:text-blue-600 transition-colors duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Sectie -->
+    <section class="container mx-auto px-6 py-32">
+        <div class="text-center animate-fadeInUp">
+            <h1 class="text-4xl font-bold mb-4">Khalid Ahouiyek Alami</h1>
+            <p class="text-xl text-gray-600">Software Developer | ROC Da Vinci College</p>
+        </div>
+    </section>
+
+    <!-- Over Mij Sectie -->
+    <section id="over-mij" class="bg-white py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 animate-slideIn">Over Mij</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/3 hover-scale">
+                    <img src="327edb9a15b304efc264668ada03f725.jpg" alt="Profielfoto" class="w-full h-64 object-cover rounded-full shadow-lg transition-shadow duration-300 hover:shadow-2xl">
+                </div>
+                <div class="md:w-2/3 animate-fadeInUp">
+                    <p class="text-gray-600 mb-4">
+                        Mijn naam is khalid ahouiyek alami. Ik ben 18 jaar. Ik ben een eerstejaars student aan het Da Vinci College, waar ik de opleiding Software Developer volg. Ik heb ervaring met verschillende programmeertalen, waaronder Python, JavaScript, HTML, CSS en PHP. Ik ben gepassioneerd door het bouwen van webapplicaties en het verkennen van nieuwe technologieën.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        In mijn vrije tijd werk ik aan interessante projecten en blijf ik mijn vaardigheden ontwikkelen om een succesvolle software ontwikkelaar te worden.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projecten Sectie -->
+    <section id="projecten" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8">Projecten</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 4-Persoons Schaakspel Project -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="Eigen_game.png" alt="4-Persoons Schaakspel Bord" class="w-full h-64 object-cover transform transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">4-Persoons Schaakspel</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Een uniek schaakspel voor 4 spelers met een fantasie-twist. Elk team heeft 4 ridders en een tovenaar
+                            in plaats van traditionele schaakstukken. Spelers kunnen kiezen tussen dobbelstenen gooien of kaarten
+                            trekken, met speciale regels rond de tovenaar.
+                        </p>
+                        <div class="mb-4">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">JavaScript</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">HTML5</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">CSS3</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Game Logic</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="project-schaakspel.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                                <span>Meer Details</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                            <span class="text-sm text-gray-500">In Ontwikkeling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BlackJack Project -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="code.jpg" alt="BlackJack Game Code" class="w-full h-64 object-cover transform transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">BlackJack Game</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Een klassiek BlackJack kaartspel ontwikkeld in Python. Het spel bevat alle standaard BlackJack regels,
+                            inclusief de mogelijkheid om kaarten te trekken (hit) of te passen (stand). De dealer volgt de traditionele
+                            casino regels en het spel houdt de score bij.
+                        </p>
+                        <div class="mb-4">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Command Line</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Game Logic</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Random Module</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="project-blackjack.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                                <span>Meer Details</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                            <span class="text-sm text-gray-500">Voltooid</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="projecten.html" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                    <span>Bekijk Alle Projecten</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Sectie -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 animate-slideIn">Contact</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8 hover-scale">
+                <div class="flex flex-col space-y-4">
+                    <p class="text-gray-600 transition-all duration-300 hover:translate-x-2">
+                        <strong>Email:</strong> khalid1alami1@gmail.com
+                    </p>
+                    <p class="text-gray-600 transition-all duration-300 hover:translate-x-2">
+                        <strong>Telefoon:</strong> 0489135260
+                    </p>
+                    <p class="text-gray-600 transition-all duration-300 hover:translate-x-2">
+                        <strong>GitHub:</strong> <a href="https://github.com/Khalid-ahouiyek-alami" class="text-blue-600 hover:underline">@Khalid-ahouiyek-alami</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="animate-fadeInUp">© 2024 Khalid Ahouiyek Alami. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
